@@ -66,18 +66,18 @@ dependencies {
 
     // 极光厂商插件版本与接入 JPush 版本保持一致，下同
     // 接入魅族厂商
-    api 'cn.jiguang.sdk.plugin:meizu:4.3.0'
+    api 'cn.jiguang.sdk.plugin:meizu:4.5.0'
     // 接入 VIVO 厂商
-    api 'cn.jiguang.sdk.plugin:vivo:4.3.0'
+    api 'cn.jiguang.sdk.plugin:vivo:4.5.0'
     // 接入 OPPO 厂商
-    api 'cn.jiguang.sdk.plugin:oppo:4.3.0'
+    api 'cn.jiguang.sdk.plugin:oppo:4.5.0'
     // 接入小米厂商
-    api 'cn.jiguang.sdk.plugin:xiaomi:4.3.0'
+    api 'cn.jiguang.sdk.plugin:xiaomi:4.5.0'
 
     // 接入华为厂商
-    api 'com.huawei.hms:push:5.0.4.302'
-    api 'cn.jiguang.sdk.plugin:huawei:4.3.0'
+    api 'com.huawei.hms:push:6.1.0.300'
+    api 'cn.jiguang.sdk.plugin:huawei:4.5.0'
     // 接入 FCM 厂商
     api 'com.google.firebase:firebase-messaging:22.0.0'
-    api 'cn.jiguang.sdk.plugin:fcm:4.3.0'
+    api 'cn.jiguang.sdk.plugin:fcm:4.5.0'
 }

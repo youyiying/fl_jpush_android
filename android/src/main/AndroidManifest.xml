@@ -4,14 +4,16 @@
 
     <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
     <permission
-        android:name="${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE"
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
+
     <!--xiaomi_permission_start-->
     <permission
-        android:name="${JPUSH_PKGNAME}.permission.MIPUSH_RECEIVE"
+        android:name="${applicationId}.permission.MIPUSH_RECEIVE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="${JPUSH_PKGNAME}.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
     <!--xiaomi_permission_end-->
+
     <!--oppo_permission_start-->
     <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" />
@@ -28,10 +30,11 @@
     <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
 
     <permission
-        android:name="${JPUSH_PKGNAME}.permission.C2D_MESSAGE"
+        android:name="${applicationId}.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="${JPUSH_PKGNAME}.permission.C2D_MESSAGE" />
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
     <!--meizu_permission_end-->
+
     <application>
         <!--xiaomi_config_start-->
         <service
@@ -108,6 +111,7 @@
             </intent-filter>
         </service>
         <!--huawei_config_end-->
+
         <!--meizu_config_start-->
         <service
             android:name="com.meizu.cloud.pushsdk.NotificationService"
@@ -168,6 +172,7 @@
                 <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE" />
             </intent-filter>
         </service>
+
         <!-- since JPushv3.6.8 ，oppov2.1.0 oppo 核心功能-->
         <service
             android:name="com.heytap.msp.push.service.DataMessageCallbackService"

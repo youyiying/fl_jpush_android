@@ -4,10 +4,10 @@ import 'package:flutter/services.dart';
 class FlJPushForAndroid {
   FlJPushForAndroid._();
 
-  final MethodChannel _channel = const MethodChannel('fl_jpush_android');
+  static const MethodChannel _channel = MethodChannel('fl_jpush_android');
 
   /// 请求OPPO通知权限
-  Future<bool> requestNotificationPermissionWithOPPO() async {
+  static Future<bool> requestNotificationPermissionWithOPPO() async {
     if (!_isAndroid) return false;
     final bool? state = await _channel
         .invokeMethod<bool?>('requestNotificationPermissionWithOPPO');
@@ -15,12 +15,12 @@ class FlJPushForAndroid {
   }
 
   /// 校验魅族通知
-  Future<bool> checkNotificationMessageWithMEIZU() async {
+  static Future<bool> checkNotificationMessageWithMEIZU() async {
     if (!_isAndroid) return false;
     final bool? state =
         await _channel.invokeMethod<bool?>('checkNotificationMessageWithMEIZU');
     return state ?? false;
   }
 
-  bool get _isAndroid => defaultTargetPlatform == TargetPlatform.android;
+  static bool get _isAndroid => defaultTargetPlatform == TargetPlatform.android;
 }

@@ -155,6 +155,13 @@
                 <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="HUAWEI_APPID" />
+        <meta-data
+            android:name="com.huawei.hms.client.cpid"
+            android:value="HUAWEI_CPID" />
         <!--huawei_config_end-->
 
         <!--meizu_config_start-->

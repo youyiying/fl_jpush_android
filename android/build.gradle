@@ -18,7 +18,7 @@ buildscript {
         //fcm
         classpath 'com.google.gms:google-services:4.3.10'
         //huawei
-        classpath 'com.huawei.agconnect:agcp:1.4.2.300'
+        classpath 'com.huawei.agconnect:agcp:1.6.0.300'
     }
 }
 
@@ -64,12 +64,9 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
-
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar', "*.aar"], dir: 'libs')
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // 极光厂商插件版本与接入 JPush 版本保持一致，下同
@@ -79,9 +76,13 @@ dependencies {
     api 'cn.jiguang.sdk.plugin:vivo:4.6.4'
     // 接入 OPPO 厂商
     api 'cn.jiguang.sdk.plugin:oppo:4.6.4'
+    api files('libs/com.heytap.msp-push-3.0.0.aar')
+    //以下为 OPPO 3.0.0 aar需要依赖
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'commons-codec:commons-codec:1.6'
+    implementation 'androidx.annotation:annotation:1.1.0'
     // 接入小米厂商
     api 'cn.jiguang.sdk.plugin:xiaomi:4.6.4'
-
     // 接入华为厂商
     api 'com.huawei.hms:push:6.1.0.300'
     api 'cn.jiguang.sdk.plugin:huawei:4.6.4'

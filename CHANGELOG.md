@@ -1,3 +1,7 @@
+## 1.0.0
+
+* Update the SDK pushed by mobile phone manufacturers
+
 ## 0.2.1
 
 * Add some vendor push methods

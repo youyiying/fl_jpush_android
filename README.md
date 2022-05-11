@@ -7,7 +7,7 @@
 [具体查看极光原生文档](https://docs.jiguang.cn/jpush/client/Android/android_3rd_guide)
 
 - 次插件仅添加原生sdk依赖和配置 `AndroidManifest.xml` 以及 `consumer-rules.pro` 混淆规则,其他配置信息需自行配置
-- 次插件未继承fcm依赖，需要添加的请查看[极光文档](https://docs.jiguang.cn/jpush/client/Android/android_3rd_guide#fcm-%E9%80%9A%E9%81%93%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97)
+- 次插件未继承fcm依赖，[fl_jpush_android_fcm](https://pub.dev/packages/fl_jpush_android_fcm) 需要添加的请查看[极光文档](https://docs.jiguang.cn/jpush/client/Android/android_3rd_guide#fcm-%E9%80%9A%E9%81%93%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97)
 
 ### 集成 oppo 配置
 
@@ -18,6 +18,7 @@
 ```groovy
 android {
     defaultConfig {
+        ...
         manifestPlaceholders = [
                 JPUSH_PKGNAME : applicationId,
                 JPUSH_APPKEY  : '',
@@ -37,11 +38,14 @@ android {
                 HUAWEI_APPID  : "配置文件里的appid",
                 HUAWEI_CPID   : "配置文件里的cp_id"
         ]
+        ...
     }
 
     sourceSets {
         main {
+            ...
             jniLibs.srcDirs = ['libs']
+            ...
         }
     }
 }

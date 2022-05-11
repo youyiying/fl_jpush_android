@@ -1,3 +1,7 @@
+## 1.1.1
+
+* Fix the huawei push problem
+
 ## 1.1.0
 
 * Add the document

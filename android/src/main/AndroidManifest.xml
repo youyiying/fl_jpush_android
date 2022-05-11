@@ -42,6 +42,7 @@
         android:protectionLevel="signature" />
     <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
     <!--xiaomi_permission_end-->
+
     <!--oppo_permission_start-->
     <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" />
@@ -158,10 +159,10 @@
 
         <meta-data
             android:name="com.huawei.hms.client.appid"
-            android:value="HUAWEI_APPID" />
+            android:value="appid=${HUAWEI_APPID}" />
         <meta-data
             android:name="com.huawei.hms.client.cpid"
-            android:value="HUAWEI_CPID" />
+            android:value="cpid=${HUAWEI_CPID}" />
         <!--huawei_config_end-->
 
         <!--meizu_config_start-->
@@ -190,15 +191,6 @@
             android:name="MEIZU_APPID"
             android:value="${MEIZU_APPID}" />
         <!--meizu_config_end-->
-        <!--fcm_config_start-->
-        <service
-            android:name="cn.jpush.android.service.PluginFCMMessagingService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-        <!--fcm_config_end-->
 
         <!--oppo_config_start-->
         <service
@@ -268,7 +260,6 @@
         <meta-data
             android:name="JPUSH_APPKEY"
             android:value="${JPUSH_APPKEY}" /> <!-- </>值来自开发者平台取得的AppKey -->
-
 
     </application>
 

@@ -1,5 +1,4 @@
 # HW push
--ignorewarning
 -keepattributes *Annotation*
 -keepattributes Exceptions
 -keepattributes InnerClasses
@@ -18,6 +17,8 @@
 
 -dontwarn com.mcs.**
 -keep class com.mcs.** { *; }
+-keep public class * extends android.app.Service
+-keep class com.heytap.msp.** { *;}
 
 # VIVO push
 -dontwarn com.vivo.push.**

@@ -16,7 +16,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:7.0.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         //fcm
-        classpath 'com.google.gms:google-services:4.3.10'
+//        classpath 'com.google.gms:google-services:4.3.10'
         //huawei
         classpath 'com.huawei.agconnect:agcp:1.6.0.300'
     }
@@ -39,7 +39,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.huawei.agconnect'
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 31
@@ -76,17 +76,17 @@ dependencies {
     api 'cn.jiguang.sdk.plugin:vivo:4.6.4'
     // 接入 OPPO 厂商
     api 'cn.jiguang.sdk.plugin:oppo:4.6.4'
-    api files('libs/com.heytap.msp-push-3.0.0.aar')
+    compileOnly files('libs/com.heytap.msp-push-3.0.0.aar')
     //以下为 OPPO 3.0.0 aar需要依赖
-    implementation 'com.google.code.gson:gson:2.6.2'
-    implementation 'commons-codec:commons-codec:1.6'
-    implementation 'androidx.annotation:annotation:1.1.0'
+    api 'com.google.code.gson:gson:2.6.2'
+    api 'commons-codec:commons-codec:1.6'
+    api 'androidx.annotation:annotation:1.1.0'
     // 接入小米厂商
     api 'cn.jiguang.sdk.plugin:xiaomi:4.6.4'
     // 接入华为厂商
     api 'com.huawei.hms:push:6.1.0.300'
     api 'cn.jiguang.sdk.plugin:huawei:4.6.4'
     // 接入 FCM 厂商
-    api 'com.google.firebase:firebase-messaging:23.0.4'
-    api 'cn.jiguang.sdk.plugin:fcm:4.6.4'
+//    api 'com.google.firebase:firebase-messaging:23.0.4'
+//    api 'cn.jiguang.sdk.plugin:fcm:4.6.4'
 }

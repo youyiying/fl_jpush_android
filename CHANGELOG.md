@@ -1,5 +1,7 @@
 ## 2.0.0
+
 * Simplified the OPPO push SDK import mode
+
 ## 1.1.1
 
 * Fix the huawei push problem

@@ -11,7 +11,9 @@
 
 ### 集成 oppo 配置
 
-在 `android/app` 目录下新建`libs`文件夹，拷贝 [com.heytap.msp-push-3.0.0.aar](https://github.com/Wayaer/fl_jpush_android/tree/main/android/libs/) 至libs文件夹内
+复制 `example/android/heytap_msp_push` 目录至 `${your project}/android/` 目录下，并在 `${your project}/android/settings.gradle` 中添加 `include ':heytap_msp_push'`
+
+* 不要修改目录和aar名字
 
 添加以下内容至 `android/app/build.gradle` 中
 
@@ -40,20 +42,7 @@ android {
         ]
         ...
     }
-
-    sourceSets {
-        main {
-            ...
-            jniLibs.srcDirs = ['libs']
-            ...
-        }
-    }
 }
-
-dependencies {
-    implementation files('libs/com.heytap.msp-push-3.0.0.aar')
-}
-
 ```
 
 - 更新日志

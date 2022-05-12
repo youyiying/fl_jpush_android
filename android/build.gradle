@@ -15,7 +15,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
         //huawei
         classpath 'com.huawei.agconnect:agcp:1.6.0.300'
     }
@@ -57,11 +56,6 @@ android {
         doNotStrip '*/mips/*.so'
         doNotStrip '*/mips64/*.so'
     }
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-        }
-    }
 }
 
 dependencies {
@@ -74,7 +68,7 @@ dependencies {
     api 'cn.jiguang.sdk.plugin:vivo:4.6.4'
     // 接入 OPPO 厂商
     api 'cn.jiguang.sdk.plugin:oppo:4.6.4'
-    compileOnly files('libs/com.heytap.msp-push-3.0.0.aar')
+    api project(path: ':heytap_msp_push')
     //以下为 OPPO 3.0.0 aar需要依赖
     api 'com.google.code.gson:gson:2.6.2'
     api 'commons-codec:commons-codec:1.6'

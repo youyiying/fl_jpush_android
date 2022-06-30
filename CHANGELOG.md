@@ -1,5 +1,8 @@
 ## 2.1.0
 
+* Update SDK version
+* Add Honor support
+
 ## 2.0.0
 
 * Simplified the OPPO push SDK import mode

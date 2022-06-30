@@ -34,10 +34,28 @@ android {
 
     defaultConfig {
         applicationId "fl.jpush.android.example"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY  : "3af087cca42c9f95df54ab89", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "flutter", //暂时填写默认值即可.
+                /// 前缀不要去掉  MZ-  MI-
+                MEIZU_APPKEY  : "MZ-魅族的APPKEY",
+                MEIZU_APPID   : "MZ-魅族的APPID",
+                XIAOMI_APPID  : "MI-小米的APPID",
+                XIAOMI_APPKEY : "MI-小米的APPKEY",
+                OPPO_APPKEY   : "OP-oppo的APPKEY",
+                OPPO_APPID    : "OP-oppo的APPID",
+                OPPO_APPSECRET: "OP-oppo的APPSECRET",
+                VIVO_APPKEY   : "vivo的APPKEY",
+                VIVO_APPID    : "vivo的APPID",
+                HUAWEI_APPID  : "配置文件里的appid",
+                HUAWEI_CPID   : "配置文件里的cp_id",
+                HONOR_APPID   : "Honor平台注册的APP ID"
+        ]
     }
 
     buildTypes {

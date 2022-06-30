@@ -1,3 +1,5 @@
+## 2.1.0
+
 ## 2.0.0
 
 * Simplified the OPPO push SDK import mode

@@ -84,7 +84,11 @@
     ,android.support.coreui
     ,android.support.compat
     ,android.arch.lifecycle" />
-
+    <queries>
+        <intent>
+            <action android:name="com.hihonor.push.action.BIND_PUSH_SERVICE" />
+        </intent>
+    </queries>
     <application>
 
         <!--xiaomi_config_start-->
@@ -252,6 +256,20 @@
             android:name="com.vivo.push.app_id"
             android:value="${VIVO_APPID}" />
         <!--vivo_config_end-->
+
+        <!--honor_config_start-->
+        <service
+            android:name="cn.jpush.android.service.JHonorService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.hihonor.push.action.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.hihonor.push.app_id"
+            android:value="${HONOR_APPID}" />
+        <!--honor_config_end-->
 
         <!--Required_config-->
         <meta-data

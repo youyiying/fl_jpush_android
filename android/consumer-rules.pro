@@ -28,3 +28,11 @@
 # MeiZu push
 -dontwarn com.meizu.cloud.**
 -keep class com.meizu.cloud.** { *; }
+
+# HONOR
+-ignorewarnings
+-keepattributes *Annotation*
+-keepattributes Exceptions
+-keepattributes InnerClasses
+-keepattributes Signature
+-keepattributes SourceFile,LineNumberTable

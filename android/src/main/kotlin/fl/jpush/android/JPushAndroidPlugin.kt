@@ -27,7 +27,6 @@ class JPushAndroidPlugin : FlutterPlugin, MethodChannel.MethodCallHandler {
             }
             "checkNotificationMessageWithMEIZU" -> {
                 PushManager.checkNotificationMessage(context)
-
                 result.success(true)
             }
         }

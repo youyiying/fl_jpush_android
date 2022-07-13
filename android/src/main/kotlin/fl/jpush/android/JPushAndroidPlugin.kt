@@ -1,7 +1,6 @@
 package fl.jpush.android
 
 import android.content.Context
-import androidx.annotation.NonNull
 import com.heytap.msp.push.HeytapPushManager
 import com.meizu.cloud.pushsdk.PushManager
 import io.flutter.embedding.engine.plugins.FlutterPlugin
@@ -13,7 +12,7 @@ class JPushAndroidPlugin : FlutterPlugin, MethodChannel.MethodCallHandler {
     private lateinit var context: Context
     private lateinit var channel: MethodChannel
 
-    override fun onAttachedToEngine(@NonNull plugin: FlutterPlugin.FlutterPluginBinding) {
+    override fun onAttachedToEngine(plugin: FlutterPlugin.FlutterPluginBinding) {
         channel = MethodChannel(plugin.binaryMessenger, "fl_jpush_android")
         channel.setMethodCallHandler(this)
         context = plugin.applicationContext
@@ -28,12 +27,13 @@ class JPushAndroidPlugin : FlutterPlugin, MethodChannel.MethodCallHandler {
             }
             "checkNotificationMessageWithMEIZU" -> {
                 PushManager.checkNotificationMessage(context)
+
                 result.success(true)
             }
         }
     }
 
-    override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
+    override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         channel.setMethodCallHandler(null)
     }
 }

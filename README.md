@@ -13,6 +13,10 @@
 
 复制 `example/android/heytap_msp_push` 目录至 `${your project}/android/` 目录下，并在 `${your project}/android/settings.gradle` 中添加 `include ':heytap_msp_push'`
 
+### 集成 honor 配置
+
+复制 `example/android/hi_push` 目录至 `${your project}/android/` 目录下，并在 `${your project}/android/settings.gradle` 中添加 `include ':hi_push'`
+
 * 不要修改目录和aar名字
 
 添加以下内容至 `android/app/build.gradle` 中

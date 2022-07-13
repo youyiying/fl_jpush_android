@@ -79,6 +79,7 @@ dependencies {
     api 'com.huawei.hms:push:6.5.0.300'
     api 'cn.jiguang.sdk.plugin:huawei:4.7.2'
     // 接入荣耀厂商
+    api project(path: ':hi_push')
     api 'cn.jiguang.sdk.plugin:honor:4.7.2'
 
 }

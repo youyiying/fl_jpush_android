@@ -36,3 +36,7 @@
 -keepattributes InnerClasses
 -keepattributes Signature
 -keepattributes SourceFile,LineNumberTable
+
+# MI push
+-dontwarn com.xiaomi.push.**
+-keep class com.xiaomi.push.** { *; }

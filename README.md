@@ -49,6 +49,9 @@ android {
     }
 }
 ```
+- 常见问题
+  - 如直接通过Android studio 拷贝 oppo和 honor 集成的aar ,会自动添加 `package ***.heytap_msp_push`、`package ***.hi_push`，要移除 这行，保证 `build.gradle` 中只有 `configurations.maybeCreate("default")`和 `artifacts.add("default", file('**.aar'))`,具体参考 example中的android目录
+
 
 - 更新日志
     - 2.3.0 更新厂商sdk 4.8.1

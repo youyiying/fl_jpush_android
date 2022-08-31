@@ -1,3 +1,7 @@
+## 2.2.2
+
+* Update SDK version to 4.8.1
+
 ## 2.2.1+1
 
 * Add Honor sdk

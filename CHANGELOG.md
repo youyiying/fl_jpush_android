@@ -1,4 +1,4 @@
-## 2.2.2
+## 2.3.0
 
 * Update SDK version to 4.8.1
 
